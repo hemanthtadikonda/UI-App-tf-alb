@@ -43,7 +43,7 @@ resource "aws_lb_listener" "main" {
     fixed_response {
       content_type = "text/plain"
       message_body = "Can you try with HostHeader"
-      status_code  = "200"
+      status_code  = "404"
     }
   }
 }
