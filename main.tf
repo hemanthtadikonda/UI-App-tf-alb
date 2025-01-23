@@ -23,7 +23,7 @@ resource "aws_security_group" "main" {
 }
 
 resource "aws_lb" "main" {
-  name               = var.internal ? "${var.env}-int-lb-sg" : "${var.env}-pub-lb-sg"
+  name               = var.internal ? "${var.env}-int-lb" : "${var.env}-pub-lb"
   internal           = var.internal
   load_balancer_type = var.load_balancer_type
   security_groups    = [aws_security_group.main.id]
